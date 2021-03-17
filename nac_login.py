@@ -17,8 +17,8 @@ username.clear()
 password = driver.find_element_by_name("password")
 password.clear()
 
-username.send_keys("Replace with credential username")
-password.send_keys("Replace with credential password")
+username.send_keys("Replace with credential-username")
+password.send_keys("Replace with credential-password")
 
 driver.find_element_by_id("loginbutton").click()
 
