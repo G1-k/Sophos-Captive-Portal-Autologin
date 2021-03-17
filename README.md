@@ -40,11 +40,38 @@ A Browser pops up (and stays without any errors)
 
 ### 3. Run Python File for Auto Login
 
-Put appropriate captive-portal link and login credentials in `python.py`, then
+1. Clone the Repo
 ```
-python3 auto-login.py
+git clone https://github.com/G1-k/Sophos-Captive-Portal-Autologin.git
 ```
-Firefox GUI should pop up and automatically enter the credentials and login
+Move both python and shell script to home folder
+
+2. Put appropriate captive-portal link and login credentials in `nac_login.py`, then
+```
+python nac_login.py
+```
+OR
+```
+sh nac_login.sh
+```
+Logged In will display in terminal
+
+### 4. Headless/RunOnStartup Setup
+
+Crontab is used to run the shell script on boot 
+
+1. Open the crontab
+```
+sudo crontab -e
+```
+
+2. Paste the following at bottom
+```
+@reboot sleep 10; cd /home/pi && bash nac_login.sh &
+```
+
+3. Reboot
+After reboot pi will automatically connect to the nac
 
 
 ## PC/Laptops 
