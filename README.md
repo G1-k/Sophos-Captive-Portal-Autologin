@@ -8,6 +8,7 @@ sudo apt-get upgrade
 sudo apt-get update
 sudo apt-get install iceweasel
 sudo pip3 install selenium
+sudo apt install firefox-esr
 ```
 ### 2. Install Geckodriver
 
