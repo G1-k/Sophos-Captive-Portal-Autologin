@@ -8,6 +8,7 @@ sudo apt-get upgrade
 sudo apt-get update
 sudo apt-get install iceweasel
 sudo pip3 install selenium
+sudo python -m pip install selenium
 sudo apt install firefox-esr
 ```
 ### 2. Install Geckodriver
@@ -49,10 +50,12 @@ Move both python and shell script to home folder
 
 2. Put appropriate captive-portal link and login credentials in `nac_login.py`, then
 ```
+sudo chmod +x nac_login.py
 python nac_login.py
 ```
 OR
 ```
+sudo chmod +x nac_login.sh
 sh nac_login.sh
 ```
 Logged In will display in terminal
